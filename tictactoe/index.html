@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Tic tac Toe</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand|Kalam|Mali|Patrick+Hand');
+    .Shikaku {
+        height:80px;
+        width:80px;
+        font-size:45px;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Kalam', cursive;
+    }
+
+    body{
+        width:550px;
+        margin:auto;
+        background-image: url("flower.jpg");;
+        }
+
+      h1{
+        font-family: 'Kalam', cursive;
+         border-bottom:1px solid black;
+      }  
+      #message{
+        font-size: 18pt;
+        font-family: 'Patrick Hand', cursive;
+      } 
+      #restart{
+        position: relative;
+        border: 1.5px solid red;
+        padding: 5px 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block; 
+        font-size: 16pt;
+        font-family: 'Patrick Hand', cursive;
+        text-decoration: none;
+        color:orangered;
+      }
+    </style>
+</head>
+<body onload="startGame();">
+	<h1>
+        Tic Tac Toe Game.</h1>
+<div id="message">This is where the message will go.</div>
+
+  <table border="1">
+      <tr>
+          <td class="Shikaku" id="s1" onClick="nextMove(this)"></td>
+          <td class="Shikaku" id="s2" onClick="nextMove(this)"></td>
+          <td class="Shikaku" id="s3" onClick="nextMove(this)"></td>
+      </tr>
+      <tr>
+        <td class="Shikaku"   id="s4" onClick="nextMove(this)"></td>
+        <td class="Shikaku"   id="s5" onClick="nextMove(this)"></td>
+        <td class="Shikaku"   id="s6" onClick="nextMove(this)"></td>
+    </tr>
+    <tr>
+      <td class="Shikaku"    id="s7"   onClick="nextMove(this)"></td>
+      <td class="Shikaku"    id="s8"  onClick="nextMove(this)"></td>
+      <td class="Shikaku"    id="s9"  onClick="nextMove(this)"></td>
+    </tr>
+  </table>  
+  <a href ="javascript: startGame();" id="restart">Start Over the game!!</a>
+  <script src='main.js'></script>    
+</body>
+	
+</html>
