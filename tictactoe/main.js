@@ -22,7 +22,9 @@ function nextMove(Shikaku){
 }
 
 function switchTurn(){
-    if(checkForWinner(document.turn)){
+    if(!movesAvailable()) {
+      setMessage ("Hikiwake! Tie Game!");
+    }else if(checkForWinner(document.turn)){
       setMessage ("Congrats" + document.turn + ", you won!")
       document.winner = document.turn;
     }else if(document.turn =="X"){
@@ -47,6 +49,15 @@ function checkForWinner(move){
        }
        return result;
 
+}
+
+function movesAvailable() {
+  for (i=1; i<=9; i++) {
+    if (getBox(i) === "") {
+      return true;
+    }
+  }
+  return false;
 }
 
 function checkRow(a,b,c,move){
